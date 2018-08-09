@@ -1,2 +1,4 @@
 <%= form_for @user_time_slot do |f|%>
-  <%=f.label 
+  <%= f.collection_check_boxes :time_slot_ids, TimeSlot.all_available, :id, :start_time %>
+  <%= f.submit %>
+<%end%>
